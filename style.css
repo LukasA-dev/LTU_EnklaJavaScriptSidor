@@ -1,0 +1,162 @@
+/* Importera Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+/* DESSA STILAR ÄR ENDAST FÖR WebKit-MOTORN! */
+/* Anpassar hela spåret */
+::-webkit-scrollbar {
+  width: 12px; /* Bredd på scrollbaren */
+}
+
+/* Anpassar spåret i scrollbaren */
+::-webkit-scrollbar-track {
+  background: #121212; /* Bakgrundsfärg på spåret, matcha detta med din sida's bakgrundsfärg */
+}
+
+/* Anpassar det rörliga tumgreppet */
+::-webkit-scrollbar-thumb {
+  border-radius: 6px; /* Rundade hörn på tumgreppet */
+  background-image: linear-gradient(
+    to bottom right,
+    #ff69b4,
+    /* Startfärg */ #4169e1 /* Slut färg */
+  ); /* Gradientfärg, matcha detta med din knapp's gradient */
+}
+
+/* Anpassar tumgreppet vid hovring */
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(
+    to bottom right,
+    #e75480,
+    /* Mörkare rosa för hover-effekt */ #3f51b5
+      /* Mörkare blå för hover-effekt */
+  );
+}
+
+/* Stilmall för <body> */
+body {
+  font-family: "Poppins", sans-serif; /* Använd Google Font för text på sidan */
+  margin: 0; /* Ta bort marginaler runt sidan */
+  padding: 0; /* Ta bort utfyllnad inuti sidan */
+  background-color: #121212; /* Mörk bakgrundsfärg för hela sidan */
+  color: #fff; /* Vit textfärg för att kontrastera mot den mörka bakgrunden */
+  display: flex; /* Använd flexbox för att centrera innehållet */
+  flex-direction: column; /* Lägg innehållet i en kolumn (uppifrån och ner) */
+  align-items: center; /* Centrera innehållet horisontellt */
+  justify-content: center; /* Centrera innehållet vertikalt */
+  height: 100vh; /* Gör <body> lika högt som visningsfönstret */
+}
+
+/* Stilmall för .container */
+.container {
+  display: flex; /* Använd flexbox för att centrera innehållet */
+  flex-direction: column; /* Lägg innehållet i en kolumn (uppifrån och ner) */
+  align-items: center; /* Centrera innehållet horisontellt */
+  justify-content: flex-start; /* Justera innehållet från toppen */
+  width: 80%; /* Justera bredden efter behov */
+  max-width: 600px; /* Maximal bredd för att förhindra sträckning på större skärmar */
+  padding: 20px; /* Lägg till lite utfyllnad för avstånd mellan innehåll och kanten av behållaren */
+  background-color: #1e1e1e; /* Mörkgrå bakgrund för behållaren */
+  border-radius: 8px; /* Rundade hörn för behållaren */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Skugg effekt för behållaren */
+  overflow: auto; /* Lägger till scroll om innehållet överskrider containerns storlek */
+}
+
+/* Stilmall för .item */
+.item {
+  display: flex; /* Använd flexbox för att centrera innehållet */
+  flex-direction: column; /* Lägg innehållet i en kolumn (uppifrån och ner) */
+  align-items: center; /* Centrera innehållet horisontellt */
+  justify-content: center; /* Centrera innehållet vertikalt */
+  margin-bottom: 10px; /* Avstånd mellan varje item */
+  width: 100%; /* Säkerställ att item tar upp hela bredden för att centrera innehållet */
+}
+
+/* Stilmall för <hr> */
+hr {
+  border: none; /* Tar bort eventuella kantlinjer */
+  border-top: 1px solid #ffffff; /* Lägger till en vit horisontell linje (ändra färgen efter behov) */
+  height: 0; /* Ser till att hr inte tar upp något vertikalt utrymme utöver kantlinjen */
+  width: 100%; /* Låter hr ta upp hela bredden av dess container */
+}
+
+/* Stilar för formuläret och dess fält */
+#registrationForm,
+#html5RegistrationForm {
+  display: flex; /* Gör formuläret till en flex-container */
+  flex-direction: column; /* Staplar child-elementen (fält och knappar) vertikalt */
+  align-items: center; /* Centrerar elementen horisontellt i containern */
+  width: 100%; /* Behåller full bredd för formuläret */
+}
+
+#registrationForm label,
+#registrationForm input,
+#registrationForm button,
+#html5RegistrationForm label,
+#html5RegistrationForm input,
+#html5RegistrationForm button {
+  margin-bottom: 10px; /* Lägg till avstånd mellan formulärelementen */
+}
+
+#registrationForm input,
+#registrationForm button,
+#html5RegistrationForm input,
+#html5RegistrationForm button {
+  padding: 10px; /* Lägg till lite utfyllnad för att göra fälten större och lättare att interagera med */
+  border: 1px solid #ddd; /* Lägg till en lätt kant runt inputfälten */
+  border-radius: 4px; /* Lägg till lätt rundade hörn för estetik */
+}
+
+/* Återställer stilen för inputfält för att undvika full bredd */
+#registrationForm input[type="text"],
+#registrationForm input[type="password"],
+#registrationForm input[type="email"],
+#html5RegistrationForm input[type="text"],
+#html5RegistrationForm input[type="password"],
+#html5RegistrationForm input[type="email"] {
+  width: auto; /* Tar bort den fulla bredden */
+  flex-grow: 1; /* Låter inputfälten fylla tillgängligt utrymme */
+}
+
+/* Specifik stil för kryssrutecontainern */
+.terms-container,
+#html5TermsContainer {
+  display: flex;
+  align-items: center; /* Centrerar kryssrutan och texten vertikalt */
+  margin-bottom: 10px; /* Lägg till avstånd under kryssrutan */
+}
+
+.terms-container input[type="checkbox"],
+#html5TermsContainer input[type="checkbox"] {
+  margin-left: 10px; /* Lägg till avstånd mellan kryssrutan och texten */
+}
+
+.terms-container label,
+#html5TermsContainer label {
+  margin: 0; /* Tar bort marginalen för att hålla texten nära kryssrutan */
+  font-size: 0.9em; /* Gör texten lite mindre för att skilja den från resten av formuläret */
+}
+
+/* Stilmall för knappen */
+#registrationForm button,
+#html5RegistrationForm button {
+  color: white; /* Vit textfärg för knappen */
+  cursor: pointer; /* Ändra muspekaren till en pekare när den hovrar över knappen */
+  background-color: #ff69b4; /* Rosa skicka-knapp, backup */
+  background-image: linear-gradient(
+    to bottom right,
+    #ff69b4,
+    #4169e1
+  ); /* Gradient från rosa till blå */
+  width: 50%; /* Säkerställ att knappen tar upp hela bredden */
+  min-width: 200px; /* Säkerställ att knappen inte blir för smal */
+}
+
+/* Justera felmeddelanden */
+#errorMessages div {
+  background-color: #ffdddd; /* Ljusröd bakgrund för felmeddelanden */
+  color: #d8000c; /* Mörkröd textfärg för felmeddelanden */
+  padding: 10px; /* Lägg till lite utfyllnad runt felmeddelandet */
+  margin-bottom: 10px; /* Lägg till avstånd mellan felmeddelanden */
+  border-radius: 4px; /* Lägg till lätt rundade hörn för felmeddelanden */
+  width: 100%; /* Säkerställ att felmeddelanden tar upp hela bredden */
+}
